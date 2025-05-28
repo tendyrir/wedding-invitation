@@ -1,1 +1,37 @@
-<h1>Вторая версия</h1>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .responsive-image {
+            max-width: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-image">
+        <picture>
+            <!-- До 440px (мобильные) -->
+            <source media="(max-width: 440px)" srcset="images/site2_440.png">
+            <!-- 441–768px (большие телефоны) -->
+            <source media="(max-width: 768px)" srcset="images/site2_768.png">
+            <!-- 769–1440px (планшеты и ноутбуки) -->
+            <source media="(max-width: 1440px)" srcset="images/site2_1440.png">
+            <!-- От 1441px (десктоп) -->
+            <source media="(min-width: 1441px)" srcset="images/site2_1920.png">
+            <!-- Фолбэк для старых браузеров -->
+            <img src="images/site1_768.png" alt="Адаптивная картинка">
+        </picture>
+    </div>
+</body>
+</html>
