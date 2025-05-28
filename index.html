@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>Адаптивные картинки (Набор 1)</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .responsive-image {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Страница 1</h1>
-        <nav>
-            <a href="page2.html">Перейти на Страницу 2</a>
-        </nav>
-    </header>
+    <h1>Страница 1</h1>
+    <p>Пример адаптивной картинки:</p>
 
     <div class="responsive-image">
-        <!-- Картинки для разных разрешений -->
-        <img src="images/site1_440.png" alt="Маленькая" class="small">
-        <img src="images/site1_768.png" alt="Средняя" class="medium">
-        <img src="images/site1_1440.png" alt="Большая" class="large">
-        <img src="images/site1_1920.png" alt="Очень большая" class="xlarge">
+        <picture>
+            <!-- До 440px (мобильные) -->
+            <source media="(max-width: 440px)" srcset="images/site1_440.png">
+            <!-- 441–768px (большие телефоны) -->
+            <source media="(max-width: 768px)" srcset="images/site1_768.png">
+            <!-- 769–1440px (планшеты и ноутбуки) -->
+            <source media="(max-width: 1440px)" srcset="images/site1_1440.png">
+            <!-- От 1441px (десктоп) -->
+            <source media="(min-width: 1441px)" srcset="images/site1_1920.png">
+            <!-- Фолбэк для старых браузеров -->
+            <img src="images/site1_768.png" alt="Адаптивная картинка">
+        </picture>
     </div>
+
+    <p><a href="page2.html">Перейти на Страницу 2</a></p>
 </body>
 </html>
 
