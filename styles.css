@@ -1,0 +1,32 @@
+/* Скрываем все изображения по умолчанию */
+.responsive-image img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Показываем нужное изображение в зависимости от ширины экрана */
+@media (max-width: 767px) {
+    .responsive-image .small { display: block; }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+    .responsive-image .medium { display: block; }
+}
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .responsive-image .large { display: block; }
+}
+@media (min-width: 1920px) {
+    .responsive-image .xlarge { display: block; }
+}
+
+/* Доп. стили для навигации */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #f0f0f0;
+}
+nav a {
+    margin: 10px;
+    color: blue;
+    text-decoration: none;
+}
